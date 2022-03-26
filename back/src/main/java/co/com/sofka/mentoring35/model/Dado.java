@@ -1,9 +1,8 @@
 package co.com.sofka.mentoring35.model;
 
-import java.sql.Time;
-import java.sql.Timestamp;
-import java.text.SimpleDateFormat;
+
 import java.util.Date;
+import java.util.Random;
 
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
@@ -16,8 +15,8 @@ public class Dado {
     private Date fecha;
     //private static final SimpleDateFormat sdf1 = new SimpleDateFormat("yyyy.MM.dd.HH.mm.ss");
 
-    public Dado(Integer numero) {
-        this.numero = numero;
+    public Dado() {
+        this.numero = new Random().nextInt(6)+1;
         this.fecha = new Date();
     }
 

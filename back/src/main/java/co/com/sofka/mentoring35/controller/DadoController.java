@@ -31,8 +31,8 @@ public class DadoController {
     }    
 
     @PostMapping("/saveRoll")
-    public Mono<Dado> guardarLanzamiento(@RequestBody Integer n){
-        return dadoService.saveRoll(new Dado(n));
+    public Mono<Dado> guardarLanzamiento(){
+        return dadoService.saveRoll(new Dado());
     }
 
     @DeleteMapping("/deleteRoll/{id}")
