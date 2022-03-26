@@ -10,8 +10,7 @@ const From = (props) => {// component stateless
   };
   return <div>
     <form onSubmit={onSubmit}>
-      <label htmlFor="list">Haz click para lanzar el dado  </label>
-      
+      <label htmlFor="list">Haz click para lanzar el dado  </label>      
      <button type="submit" className='btn btn-success' disabled={props.loading}>
         Lanzar
       </button>
@@ -21,6 +20,7 @@ const From = (props) => {// component stateless
 
 
 const stateMapToPros = state => {
+  console.log(state);
   return {
     loading: state.view.loading
   }

@@ -1,31 +1,27 @@
-import React, {useState} from 'react'
+import React from 'react';
 import { connect } from 'react-redux';
-
-
-
-function randomRoll(sides = 6) {
-  return Math.floor(Math.random() * sides) + 1;
-}
-
-
+import DadoLanzado from './Dado';
 
 
 export const Result = (props) => {
-  
+  const dado = props.result;
 
-  return <div>   
-     {props.result && 'Número obenido: '+randomRoll()}
-      
-     
-  </div>
-}
+  return (
+    <DadoLanzado value={dado}/>
+    
+   
+    );
+    
+    
+};
 
 
 const stateMapToPros = (state) => {
-  return {
-    result: state.random.result?.dado
-  }
-}
+  return {    
+      result: state.random.result?.numero,
+      
+  };
+};
 
 
 export default connect(stateMapToPros)(Result)
