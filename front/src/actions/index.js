@@ -4,7 +4,7 @@ export const fetchRandom = (state) => (dispatch) => {
 
     dispatch({ type: "view-loading" });
 
-    return fetch(`http://localhost:8080/r`, {
+    return fetch(`http://localhost:8080/appDado/saveRoll`, {
         method: 'POST', // *GET, POST, PUT, DELETE, etc.
         headers: {
             'Content-Type': 'application/json'
