@@ -4,7 +4,7 @@ const DadoLanzado = (props) => {
     const rutaFoto ='/assets/num'+numDado+'.png';
     return (
         <>
-        <br/>
+        
         <br/>
             {props.value?(<img src={rutaFoto} alt={rutaFoto} width="50" height="50"/>):(<div></div>)}
         <br/>
