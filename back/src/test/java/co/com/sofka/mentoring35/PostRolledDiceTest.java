@@ -22,9 +22,5 @@ public class PostRolledDiceTest {
 
     }
 
-    @Test
-    void getAllTest(){
-        Flux<Dado> getDadoFlux = dadoService.getAllRoll();
-        StepVerifier.create(getDadoFlux).expectComplete().verify();
-    }
+
 }
