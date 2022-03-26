@@ -13,12 +13,12 @@ public class Dado {
     @Id
     private String id;
     private Integer numero;
-    private String fecha;
-    private static final SimpleDateFormat sdf1 = new SimpleDateFormat("yyyy.MM.dd.HH.mm.ss");
+    private Date fecha;
+    //private static final SimpleDateFormat sdf1 = new SimpleDateFormat("yyyy.MM.dd.HH.mm.ss");
 
     public Dado(Integer numero) {
         this.numero = numero;
-        this.fecha = sdf1.format(System.currentTimeMillis());
+        this.fecha = new Date();
     }
 
     public String getId() {
@@ -33,10 +33,10 @@ public class Dado {
     public void setNumero(Integer numero) {
         this.numero = numero;
     }
-    public String getFecha() {
+    public Date getFecha() {
         return fecha;
     }
-    public void setFecha(String fecha) {
+    public void setFecha(Date fecha) {
         this.fecha = fecha;
     }
 

@@ -24,4 +24,8 @@ public class DadoService {
     public void deleteRoll(String id){
         dadoRepo.deleteById(id);
     }
+
+    public void deleteAllRolls(){
+        dadoRepo.deleteAll();
+    }
 }
