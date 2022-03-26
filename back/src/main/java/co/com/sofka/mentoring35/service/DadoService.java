@@ -20,4 +20,8 @@ public class DadoService {
     public Mono<Dado> saveRoll(Dado dado){
         return dadoRepo.save(dado);
     }
+
+    public void deleteRoll(String id){
+        dadoRepo.deleteById(id);
+    }
 }
