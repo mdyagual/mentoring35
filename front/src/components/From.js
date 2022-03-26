@@ -20,7 +20,6 @@ const From = (props) => {// component stateless
 
 
 const stateMapToPros = state => {
-  console.log(state);
   return {
     loading: state.view.loading
   }
