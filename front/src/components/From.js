@@ -10,18 +10,10 @@ const From = (props) => {// component stateless
   };
   return <div>
     <form onSubmit={onSubmit}>
-      <label htmlFor="list">¿Cuántos dados va a lanzar?</label>
+      <label htmlFor="list">Haz click para lanzar el dado  </label>
       
-      <select id="numDice"
-        onChange={(e) => setState(e.target.value)}>
-        <option value="blank"></option>
-        <option value="value1">1</option>
-        <option value="value2">2</option>
-      </select>
-      <br />
-      <br />
-      <button type="submit" disabled={props.loading}>
-        Enviar
+     <button type="submit" className='btn btn-success' disabled={props.loading}>
+        Lanzar
       </button>
     </form>
   </div>
