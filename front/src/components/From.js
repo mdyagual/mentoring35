@@ -10,11 +10,15 @@ const From = (props) => {// component stateless
   };
   return <div>
     <form onSubmit={onSubmit}>
-      <label htmlFor="list">Ingrese una lista separada por comas:</label>
+      <label htmlFor="list">¿Cuántos dados va a lanzar?</label>
+      
+      <select id="numDice"
+        onChange={(e) => setState(e.target.value)}>
+        <option value="blank"></option>
+        <option value="value1">1</option>
+        <option value="value2">2</option>
+      </select>
       <br />
-      <textarea id="list" style={{ width: "300px", height: "120px" }} 
-        onChange={(e) => setState(e.target.value)}
-      ></textarea>
       <br />
       <button type="submit" disabled={props.loading}>
         Enviar

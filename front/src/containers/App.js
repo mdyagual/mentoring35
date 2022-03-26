@@ -1,13 +1,14 @@
-import React, { Component } from 'react'
+import React, { Component, useState } from 'react'
 import From from '../components/From'
 import Result from '../components/Result'
 
 class App extends Component {// component stateful
   render() {
+    
     return (
       <div>
-        <h3>Lista Random</h3>
-        <p>Sistema Ramdom - Demo</p>
+        <h3>Random DEMO</h3>
+        <p>Lanzamiento de dados</p>
         <From />
         <Result />
       </div>
@@ -16,5 +17,3 @@ class App extends Component {// component stateful
 }
 
 export default App
-
-
